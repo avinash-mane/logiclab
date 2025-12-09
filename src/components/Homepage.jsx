@@ -10,6 +10,7 @@ const cssLogo = "https://raw.githubusercontent.com/github/explore/main/topics/cs
 const logicLogo = "https://cdn-icons-png.flaticon.com/512/3107/3107734.png"; // Brain icon
 const dsLogo = "https://cdn-icons-png.flaticon.com/512/5995/5995578.png";
 const nextjsLogo = "https://raw.githubusercontent.com/github/explore/main/topics/nextjs/nextjs.png";
+const githubLogo = "https://raw.githubusercontent.com/github/explore/main/topics/github/github.png";
 
 const courses = [
   { name: 'Logic Building', icon: <img src={logicLogo} alt="Logic Building" style={{height:48, width:48}} /> },
@@ -20,13 +21,14 @@ const courses = [
   { name: 'Node.js', icon: <img src={nodeLogo} alt="Node.js" style={{height:48, width:48}} /> },
   { name: 'Database', icon: <img src={dbLogo} alt="Database" style={{height:48, width:48}} /> },
   { name: 'HTML', icon: <img src={htmlLogo} alt="HTML" style={{height:48, width:48}} /> },
-  { name: 'CSS', icon: <img src={cssLogo} alt="CSS" style={{height:48, width:48}} /> }
+  { name: 'CSS', icon: <img src={cssLogo} alt="CSS" style={{height:48, width:48}} /> },
+  { name: 'GitHub', icon: <img src={githubLogo} alt="GitHub" style={{height:48, width:48}} /> }
 ];
 
 function Homepage({ onRegisterClick, onAdminClick }) {
   return (
     <div className="homepage">
-      <div className="admin-link-container">
+      <div className="admin-link-container" style={{display: 'none'}}>
         <button className="admin-link-button" onClick={onAdminClick}>
           Login
         </button>
@@ -39,7 +41,7 @@ function Homepage({ onRegisterClick, onAdminClick }) {
           <h1 className="hero-title">Your 4 Years Loss <span className="highlight-text">Recovered</span> in 4 Months</h1>
           <p className="hero-subtitle">
             <span>
-              Once a member, always a member.<br/> Lifetime access for <span style={{fontWeight: 700, color: '#27ae60'}}><b>₹12,000</b></span> only, limited time offer!
+              Once a member, always a member. Lifetime access for <span style={{fontWeight: 700, color: '#27ae60'}}><b>₹12,000</b></span> only
               <br/> Starting from 1st January 2026.
             </span>
           </p>
@@ -47,6 +49,7 @@ function Homepage({ onRegisterClick, onAdminClick }) {
           <button className="cta-button" onClick={onRegisterClick}>
             Book Your Demo Class Now
           </button>
+          <h5>With 7 Years Industry Expert</h5>
           </div>
         </div>
       </header>
@@ -115,6 +118,19 @@ function Homepage({ onRegisterClick, onAdminClick }) {
 
       <footer className="footer">
         <div className="container">
+        <a 
+          href="https://wa.me/919922280496" 
+          target="_blank" 
+          className="cta-button whatsapp-button"
+          style={{display: 'inline-flex', alignItems: 'center', gap: '0.5em', textDecoration: 'none', padding: '10px 20px', marginBottom: '20px'}}
+        >
+          <img 
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" 
+            alt="WhatsApp" 
+            style={{height:24, width:24}} 
+          />
+          <span>Ask me anything!</span>
+        </a>
           <p>&copy; 2025 LogicLab. All rights reserved.</p>
         </div>
       </footer>
